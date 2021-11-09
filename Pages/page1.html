@@ -6,8 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body style="background-color: black;">
-    <img src="../Images/emoji1.jpg" alt="" width="70%" height="100%">
-    
+<style>
+    img{
+        height: 95vh;
+        width: 200vh;
+        filter: blur(3px);
+        -webkit-filter: blur(3px);
+    }
+    body{
+        background-color: black;
+    }
+    .bgtext {
+  background-color:rgb(40, 85, 75); /* Fallback color */
+  background-color:rgb(40, 85, 75); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 95%;
+  padding: 20px;
+  text-align: center;
+}
+</style>
+<body>
+    <div class="bgimg">
+        <img src="../Images/page2.jpg" alt="">
+    </div>
+    <div class="bgtext">
+        <h1>So what's your mood !?</h1>
+    </div>
 </body>
 </html>
