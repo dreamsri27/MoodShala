@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Custom Radio Buttons | CodingNepal</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" >
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    html,
+    body {
+    background-image: url(./Images/homepagemood.jpg);
+      background-size: cover;
+      display: grid;
+      height: 100%;
+      place-items: center;
+      height: 70vh;
+      width: 100%;
+     
+
+    }
+    .wrapper {
+        margin-top: 100px;
+        
+      width: 350px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    }
+    .wrapper .title {
+      color: #fff;
+      line-height: 65px;
+      text-align: center;
+      background: #333;
+      font-size: 25px;
+      font-weight: 500;
+      border-radius: 10px 10px 0 0;
+    }
+    .wrapper .box {
+      padding: 20px 30px;
+      background: #fff;
+      border-radius: 10px;
+    }
+    .wrapper .box label {
+      display: flex;
+      height: 53px;
+      width: 100%;
+      align-items: center;
+      border: 1px solid lightgrey;
+      border-radius: 50px;
+      margin: 10px 0;
+      padding-left: 20px;
+      cursor: default;
+      transition: all 0.3s ease;
+    }
+    #option-1:checked ~ .option-1,
+    #option-2:checked ~ .option-2,
+    #option-3:checked ~ .option-3,
+    #option-4:checked ~ .option-4 ,
+    #option-5:checked ~ .option-5{
+      background: #333;
+      border-color: #333;
+    }
+    .wrapper .box label .dot {
+      height: 20px;
+      width: 20px;
+      background: #d9d9d9;
+      border-radius: 50%;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    #option-1:checked ~ .option-1 .dot,
+    #option-2:checked ~ .option-2 .dot,
+    #option-3:checked ~ .option-3 .dot,
+    #option-4:checked ~ .option-4 .dot, 
+    #option-5:checked ~ .option-5 .dot{
+      background: #fff;
+    }
+    .box label .dot::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(2);
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+    #option-1:checked ~ .option-1 .dot::before, 
+    #option-2:checked ~ .option-2 .dot::before,
+    #option-3:checked ~ .option-3 .dot::before,
+    #option-4:checked ~ .option-4 .dot::before
+    #option-5:checked ~ .option-5 .dot::before {
+      background: #333;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    #option-1:checked ~ .option-1 .dot::before,
+    #option-2:checked ~ .option-2 .dot::before,
+    #option-3:checked ~ .option-3 .dot::before,
+    #option-4:checked ~ .option-4 .dot::before
+    #option-5:checked ~ .option-5 .dot::before {
+      background: #333;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    .wrapper .box label .text {
+      color: #333;
+      font-size: 18px;
+      font-weight: 400;
+      padding-left: 10px;
+      transition: color 0.3s ease;
+    }
+    #option-1:checked ~ .option-1 .text {
+      color: yellow;
+    }
+    #option-2:checked ~ .option-2 .text {
+      color: red;
+    }
+    #option-3:checked ~ .option-3 .text {
+      color: blue;
+    }
+    #option-4:checked ~ .option-4 .text {
+      color: skyblue;
+    }
+    #option-5:checked ~ .option-5 .text {
+      color: brown;
+    }
+    .wrapper .box input[type="radio"] {
+      display: none;
+    }
+    
+    
+  </style>
+  <body >
+      
+      
+    <div class="wrapper">
+      <div class="title">What's your Mood Then</div>
+      <div class="box">
+        <input type="radio" name="select" id="option-1" />
+        <input type="radio" name="select" id="option-2" />
+        <input type="radio" name="select" id="option-3" />
+        <input type="radio" name="select" id="option-4" />
+        <input type="radio" name="select" id="option-5" />
+    <label for="option-1" class="option-1">
+        <a href="./Pages/happy.html"><div class="dot"></div></a>
+        <a href="./Pages/happy.html"><div class="text">Happy</div></a>
+          <i class="fa fa-smile-o" style="margin: 20px;" aria-hidden="true"></i>
+        </label>
+        <label for="option-2" class="option-2">
+            <a href="./Pages/angry.html"><div class="dot"></div></a>
+            <a href="./Pages/angry.html"><div class="text">Angry</div></a>
+          <i class="fa fa-meh-o" style="margin: 20px;" aria-hidden="true"></i>
+        </label>
+        <label for="option-3" class="option-3">
+            <a href="./Pages/justidle.html"><div class="dot"></div></a>
+          <a href="./Pages/justidle.html"> <div class="text">Just Idle</div></a>
+          <i class="fa fa-smile-o" style="margin: 20px;" aria-hidden="true"></i>
+        </label>
+        <label for="option-4" class="option-4">
+            <a href="./Pages/crybaby.html"><div class="dot"></div></a>
+            <a href="./Pages/crybaby.html"><div class="text">Sad</div></a>
+          <i class="fa fa-frown-o" style="margin: 20px;" aria-hidden="true"></i>
+        </label>
+        <label for="option-5" class="option-5">
+            <a href="./Pages/CALM.html"><div class="dot"></div></a>
+          <a href="./Pages/CALM.html"><div class="text">calm</div></a>
+          <i class="fa fa-smile-o" style="margin: 20px;" aria-hidden="true"></i>
+        </label>
+      </div>
+    
+    </div>
+  </body>
+</html>

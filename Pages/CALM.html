@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    *
+    {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: white}
+     #container {
+        display: inline-flex;
+        background-color: rgb(161, 90, 90);
+
+      }
+      body{
+        position: relative;
+      }
+      .body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         
+       
+      }
+      h1{
+        color: rgb(214, 54, 147);
+        text-align: center;
+        font-size: 70px;
+        text-decoration: underline;
+      }
+      img{
+        display: flex;
+      }
+      .div1{
+        background-color: rgb(134, 92, 158);
+        border-radius: 25px;
+        height: 100px;
+        width: 290px;
+        position: absolute;
+        top: 90px;
+        left: 100px;
+        color: white;
+        text-align: center;
+        line-height: 100px;
+        font-size: 25px;
+      }
+
+      
+      
+      #div3{
+        top: 90px; 
+        left: 1050px;
+      }#div4{
+        top: 400px;
+        left: 1200px;
+      }
+
+      .div1:hover{
+        box-shadow: 0px 0px 15px 5px rgb(135, 212, 202);
+      }
+      .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(96, 197, 189);
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+<body>
+    
+<h1>Calm</h1>
+<a href="#">
+  <div id="myBtn" class="div1">
+    Quotes
+   </div>
+   <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p id="poptext"></p>
+    </div>
+  
+  </div>
+</a><a href="#">
+    <div id="myBtn"style="top: 400px;
+    left: 200px;" class="div1">
+     Novels
+     </div>
+     <div id="myModal" class="modal">
+  
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="popBook"></p>
+      </div>
+    
+    </div>
+  </a>
+
+<!-- <a href="#">
+<div class="div1"  id="myBtn">
+
+Novels To read
+</div>
+<div id="myModal" class="modal">
+
+    
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p id="poptext"></p>
+    </div>
+  
+  </div>
+  </a> -->
+
+    <div class="body">
+      <img src="../Images/calmface.gif" alt=""  width="550px" height="550px"/>
+    </div>
+    <a href="#"><div class="div1" id="div3">
+      Activities to do
+    </div></a>
+    <a href="#">
+      <div class="div1" id="div4">
+
+        Benefit of being Calm
+      </div>
+    </a>
+    
+
+
+
+</body>
+<script>
+    var modal = document.getElementById("myModal");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0,4];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  var HappyArr = ['There are times when we stop, we sit still',
+'Have faith.',' “Breath is the power behind all things…. ..','Be yourself.' ,"Breathe.," ,"Manage your emotions. ","Have an open heart.","Don't force anything. ...","Feed your soul."]
+var bookArr=["The Things You Can See Only When You Slow Down: How to Be Calm and Mindful in a Fast-Paced World by Haemin Sunim","Collected Poems by William Wordsworth","How to Love by Thich Nhat Hanh","A Thousand Mornings by Mary Oliver","Brave Enough by Cheryl Strayed","The South by Colm Tóibín"]
+
+
+  function randomNumber(min,max){
+    min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  var randomNum = HappyArr[randomNumber(0,9)];
+  document.getElementById("poptext").innerHTML=randomNum;
+  var randomNum1 =bookArr[randomNumber(0,6)];
+  document.getElementById("popBook").innerHTML=randomNum1;
+  
+  </script>
+</html>

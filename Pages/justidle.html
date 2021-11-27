@@ -8,156 +8,173 @@
 </head>
 
 <style>
-    *{background-color: rgb(116, 105, 105);}
+    *
+    {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: white}
      #container {
         display: inline-flex;
-        background-color: rgb(71, 65, 65);
+        background-color: rgb(161, 90, 90);
+
       }
-      .box {
-        width: 325px;
-        height: 900px;
-        overflow: hidden;
-        border: 2px solid white;
-        margin-bottom: 10px;
-        text-align: justify;
-        padding: 20px;
-        margin-right: 30px;
-        margin-left: 20px;
-        border-radius: 15px;
-        margin-top: 20px;
-        border: 1px solid black;
+      body{
+        position: relative;
       }
-      #box1 {
-        background-color: rgb(71, 65, 65)0;
-        font-family: Arial;
+      .body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         
+       
       }
-      #box2 {
-        background-color: rgb(71, 65, 65)0;
-        font-family: Arial;
-      }
-      #box3 {
-        background-color: rgb(71, 65, 65)0;
-        font-family: Arial;
-      }
-      #box4 {
-        background-color: rgb(71, 65, 65)0;
-        font-family: Arial;
-      }
-      .box img {
-        width: 100%;
-        height: 250px;
-        border-radius: 10px;
-      }
-      .box h2 {
+      h1{
+        color: brown;
         text-align: center;
-        margin: 10px;
+        font-size: 70px;
+        text-decoration: underline;
       }
-      .mybutton {
-        display: block;
-        margin-top: 10px;
-        text-decoration: none;
+      img{
+        display: flex;
+      }
+      .div1{
+        background-color: rgb(42, 43, 41);
+        border-radius: 25px;
+        height: 100px;
+        width: 290px;
+        position: absolute;
+        top: 90px;
+        left: 100px;
         color: white;
-        font-family: arial;
-        background-color: cornflowerblue;
-        padding: 5px 10px;
-        border-radius: 10px;
+        text-align: center;
+        line-height: 100px;
+        font-size: 25px;
       }
-      .border2 {
-        box-sizing: border-box;
+
+      
+      #div2{
+        top: 400px;
+        left: 200px;
       }
-      h1 {
-        margin-top: 50px;
-        color: white;
-        font-weight: bolder;
+      #div3{
+        top: 90px; 
+        left: 1050px;
+      }#div4{
+        top: 400px;
+        left: 1200px;
       }
-      html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 70px;
+
+      .div1:hover{
+        box-shadow: 0px 0px 15px 5px goldenrod;
       }
+      .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
 </style>
 <body>
     
+<h1>Just Idle</h1>
+<a href="#">
+  <div id="myBtn" class="div1">
+    Things To Do
+   </div>
+   <div id="myModal" class="modal">
 
-</html>
-<h2
-style="
-  text-align: center;
-  font-size: 30px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-"
->
-<a id="technologies"></a>
-I AM IDLE😬
-</h2>
-<div class="border2">
-<div id="container">
-  <div class="box" id="box1">
-    <div class="image-heading">
-      <img src="../Images/justidle.jpg" alt="" />
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p id="poptext"></p>
     </div>
-    <h2>
-      Quote for you 
-    </h2>
-    <p>
-        Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do. If you haven’t found it yet, keep looking. Don’t settle. As with all matters of the heart, you’ll know when you find it.
-    </p>
-    <div class="image" style="text-align: center;">
-    </div>
+  
   </div>
-  <div class="box" id="box2">
-    <div class="image-heading">
-      <img src="../Images/justidle.jpg" alt="" />
-    </div>
-    <h2>
-      Story time !
-    </h2>
-    <p>
-        There was a boy, whose family was very wealthy. One day his father took him on a trip to the country, where he aimed to show his son, how poor people live. So they arrived to a farm of a very poor family, as he considered. They spent there several days. On their return, the father asked his son, did he like the trip.
+</a>
 
-„Oh, it was great, dad” – the boy replied. „Did you notice how poor people live?” „Yeah, I did“- said the boy. The father asked his son to tell in more details about his impressions from their trip“.
-
-„Well, we have only one dog, and they have four of them. In our garden there is a pool, while they have a river that has no end. We‘ve got expensive lanterns, but they have stars above their heads at night. We have the patio, and they have the whole horizon. We have only a small piece of land, while they have the endless fields. We buy food, but they grow it. We have high fence for protection of our property, and they don‘t need it, as their friends protect them.”
-
-The father was stunned. He could not say a word.
-
-Then the boy added: „Thank you, dad, for letting me see how poor we are.”
-    </p>
-    <div class="image" style="text-align: center;">
-    </div>
-  </div>
-  <div class="box" id="box3">
-    <div class="image-heading">
-      <img src="../Images/justidle.jpg" alt="" />
-    </div>
-    <h2>
-      Another quote for U !
-    </h2>
-    <p>
-        Hear about the new restaurant called Karma?
-        There’s no menu: You get what you deserve.
-    </p>
-    <div class="image" style="text-align: center;">
-    </div>
-  </div>
-
-  <div class="box" id="box4">
-    <div class="image-heading">
-      <img src="../Images/justidle.jpg" alt="" />
-    </div>
-    <h2>
-      Movie Suggestions !
-    </h2>
-    <p>
-     The Martian<br>
-     Interstellar<br>
-     Squid Game<br>
-     Marvel Series<br>
-     Money Hiest<br>
-    </p>
-    <div class="image" style="text-align: center;">
-    </div>
-  </div>
+  
+<div class="div1" id="div2">
+</a>
+Jokes
 </div>
-</div>
+    <div class="body">
+      <img src="../Images/idleface.gif" alt=""  width="550px" height="550px"/>
+    </div>
+    <a href="#"><div class="div1" id="div3">
+     Movies Suggections
+    </div></a>
+    <a href="#">
+      <div class="div1" id="div4">
+
+       Music
+      </div>
+    </a>
+    
+
+
+
 </body>
+<script>
+  var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+var HappyArr = ['There is no path to happiness; happiness is the path.','I have chosen to be happy because its good for my health.','Happiness is a journey, not a destination.','No medicine cures what happiness cannot.'];
+var min = 0;
+function randomNumber(){
+
+  return HAppyArr[Math.floor(Math.random() * 4);
+}
+var randomNum = HAppyArr[randomNumber(0,4)];
+</script>
+</html>
